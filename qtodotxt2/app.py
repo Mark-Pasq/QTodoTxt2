@@ -105,6 +105,7 @@ def run():
 
     controller.start()
     app.setWindowIcon(QtGui.QIcon(":/qtodotxt"))
+    app.setFont(QtGui.QFont('Times', 12))
     app.exec_()
     sys.exit()
 

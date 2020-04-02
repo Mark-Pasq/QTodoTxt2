@@ -53,7 +53,7 @@ class MainController(QtCore.QObject):
         lowest_priority = self._settings.value("lowest_priority", "D")
         idx = string.ascii_uppercase.index(lowest_priority) + 1
         priorities = ['(' + val + ')' for val in string.ascii_uppercase[:idx]]
-        keywords = ['rec:', 'h:1'] #['due:', 't:', 'rec:', 'h:1']
+        keywords = ['rec:', 'h:1']  # ['due:', 't:', 'rec:', 'h:1']
         self._completionStrings = contexts + projects + priorities + self.calendarKeywords + keywords
         self.completionChanged.emit()
 
@@ -73,7 +73,7 @@ class MainController(QtCore.QObject):
         self._filteredTasks.insert(after + 1, task)  # force the new task to be visible
         self._file.tasks.append(task)
 
-        self._file.connectTask(task)  #Ensure task will be added
+        self._file.connectTask(task)  # Ensure task will be added
         self.filteredTasksChanged.emit()
         return after + 1
 
