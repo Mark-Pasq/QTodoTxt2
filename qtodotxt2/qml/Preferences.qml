@@ -23,7 +23,7 @@ Dialog {
             }
             CheckBox { 
                 id: autoSaveCB
-                text: qsTr("Autosave") 
+                text: qsTr("Auto-save")
                 checked: true
             }
             CheckBox {
